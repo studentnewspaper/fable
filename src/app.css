@@ -1,0 +1,56 @@
+@tailwind base;
+/* Write your global styles here, in PostCSS syntax */
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'Newsreader 72pt';
+	font-weight: normal;
+	src: url('/fonts/Newsreader72pt-Regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Newsreader 72pt';
+	font-weight: bold;
+	src: url('/fonts/Newsreader72pt-Bold.woff2') format('woff2');
+}
+
+html {
+	/* @apply bg-gray-50; */
+}
+
+.fw {
+	@apply max-w-[1000px] mx-auto px-4 xs:px-8;
+}
+
+.article {
+	@apply text-base leading-relaxed font-serif space-y-4;
+}
+
+.article a {
+	@apply text-red-600 hover:underline;
+}
+
+.article :is(ul, ol) {
+	@apply ml-8 list-disc;
+}
+
+.article li::marker {
+	@apply text-red-700;
+}
+
+.article li {
+	@apply pl-1;
+}
+
+.article img {
+	max-width: 100%;
+}
+
+.article h1 {
+	@apply text-xl font-bold;
+}
+
+.article h2 {
+	@apply text-lg font-bold;
+}

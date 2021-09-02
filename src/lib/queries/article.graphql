@@ -1,0 +1,19 @@
+query Article($slug: String!) {
+	article(slug: $slug) {
+		id
+		published
+		updated
+		title
+		content
+		author {
+			id
+			slug
+			name
+		}
+		featuredImage {
+			caption
+			alt
+			url
+		}
+	}
+}

@@ -1,0 +1,15 @@
+query Section($id: String!) {
+	category(id: $id) {
+		id
+		name
+		articles(take: 150) {
+			hasNextPage
+			lastCursor
+			nodes {
+				id
+				slug
+				title
+			}
+		}
+	}
+}

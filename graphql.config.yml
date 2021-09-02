@@ -1,0 +1,15 @@
+overwrite: true
+schema: './graphql.schema.json'
+documents: 'src/**/*.graphql'
+config:
+  immutableTypes: true
+  skipTypename: true
+  scalars:
+    DateTime: 'string'
+  withHooks: false
+generates:
+  src/lib/generated/graphql.ts:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-urql'

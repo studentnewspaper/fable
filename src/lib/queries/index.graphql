@@ -1,0 +1,18 @@
+query Homepage {
+	categories {
+		id
+		name
+		isSection
+		articles(take: 14) {
+			nodes {
+				id
+				slug
+				title
+				featuredImage {
+					url
+					alt
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,59 @@
+[
+	{
+		"role": "President",
+		"email": "president@studentnewspaper.org",
+		"people": ["Ece Kucuk"]
+	},
+	{
+		"role": "Editor In Chief",
+		"email": "editors@studentnewspaper.org",
+		"people": ["Nicholas Bush"]
+	},
+	{
+		"role": "Deputy Editor In Chief",
+		"email": "editors@studentnewspaper.org",
+		"people": ["Georgina McNamara"]
+	},
+	{
+		"role": "Secretary",
+		"email": "secretary@studentnewspaper.org",
+		"people": ["Freya Buxton"]
+	},
+	{
+		"role": "Treasurer",
+		"email": "treasurer@studentnewspaper.org",
+		"people": ["Karishma Balasubramanian"]
+	},
+	{
+		"role": "Inclusivity Officer",
+		"people": ["Tanvi Ajmera"]
+	},
+	{
+		"role": "Social Secretary",
+		"email": "social@studentnewspaper.org",
+		"people": ["Karuna Rahman"]
+	},
+	{
+		"role": "Outreach Officer",
+		"email": "outreach@studentnewspaper.org",
+		"people": ["Cisy Ye"]
+	},
+	{
+		"role": "Head of Digital",
+		"email": "digital@studentnewspaper.org",
+		"people": ["Nick Bush"]
+	},
+	{
+		"role": "Social Media",
+		"people": ["Ritu Andrews Machilath"]
+	},
+	{
+		"role": "Advertising Officer",
+		"email": "advertising@studentnewspaper.org",
+		"people": ["Emma Conn"]
+	},
+	{
+		"role": "Distribution Officer",
+		"people": ["Laura McLay"]
+	}
+]

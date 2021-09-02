@@ -1,0 +1,16 @@
+query Author($slug: String!) {
+	author(slug: $slug) {
+		id
+		name
+		bio
+		canonical {
+			id
+			slug
+		}
+		articles {
+			id
+			slug
+			title
+		}
+	}
+}
