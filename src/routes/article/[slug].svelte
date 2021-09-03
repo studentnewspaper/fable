@@ -100,13 +100,16 @@
 			<div class="text-gray-400 text-sm mt-0.5">Updated {updated}</div>
 		{/if}
 	</div>
-	<div class="mt-5 md:mt-8 article">
+	<div class="mt-5 md:mt-8 article md:text-lg">
 		{@html article.content}
+	</div>
+	<div class="self-end">&nbsp;</div>
+	<div class="mt-6">
 		<p>
 			<a href="/" class="text-red-600 hover:underline font-sans">← Latest articles</a>
 		</p>
 	</div>
-	<div class="self-end">&nbsp;</div>
+	<div />
 </article>
 
 <div class="fw mt-8" />
