@@ -126,7 +126,7 @@
 						>
 					</div>
 				</div>
-				{#each section.articles.nodes.slice(1, 8 + 1) as article (article.id)}
+				{#each section.articles.nodes.slice(1, 10 + 1) as article (article.id)}
 					<div class="font-serif">
 						<a href={`/article/${article.slug}`} class="hover:underline">{article.title}</a>
 					</div>

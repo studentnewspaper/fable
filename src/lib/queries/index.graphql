@@ -3,7 +3,7 @@ query Homepage {
 		id
 		name
 		isSection
-		articles(take: 14) {
+		articles(take: 12) {
 			nodes {
 				id
 				slug
