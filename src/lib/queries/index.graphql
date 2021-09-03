@@ -1,5 +1,5 @@
 query Homepage {
-	categories {
+	featured: categories(include: ["featured"]) {
 		id
 		name
 		isSection
@@ -12,6 +12,19 @@ query Homepage {
 					url
 					alt
 				}
+			}
+		}
+	}
+
+	categories(exclude: ["featured"]) {
+		id
+		name
+		isSection
+		articles(take: 12) {
+			nodes {
+				id
+				slug
+				title
 			}
 		}
 	}

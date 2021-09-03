@@ -8,7 +8,7 @@
 	const year = new Date().getFullYear();
 	const links = [
 		['Latest', '/'],
-		// ['Freshers', '/section/freshers'],
+		['Freshers', '/section/freshers'],
 		['Fringe', '/section/fringe'],
 		['About', '/about'],
 	];
@@ -40,11 +40,9 @@
 
 <slot />
 
-<div class="mb-16" />
-
-<!-- <footer class="mt-16 bg-gray-50">
+<footer class="mt-16 bg-gray-100 border-t">
 	<div class="py-6 fw">
 		<div>&copy; The Student Newspaper {year}</div>
 		<div>Site designed and developed by Nicholas Bush and Isabella Ronca</div>
 	</div>
-</footer> -->
+</footer>

@@ -28,23 +28,12 @@
 	import HomepageBanner from '$lib/HomepageBanner.svelte';
 	// import Section from '$lib/Section.svelte';
 
-	function without<T>(arr: T[], predicate: (v: T) => boolean): [T | null, T[]] {
-		for (let i = 0; i < arr.length; i++) {
-			const v = arr[i];
-
-			if (predicate(v)) {
-				const newArr = [...arr];
-				const removedItem = newArr.splice(i, 1);
-				return [removedItem[0], newArr];
-			}
-		}
-		return [null, arr];
-	}
-
 	export let data: HomepageQuery;
-	let sections = data.categories.filter((section) => section.isSection);
-	let featured = data.categories.find((section) => section.id == 'featured');
+	let featured = data.featured[0];
 	let topArticle = featured != null ? featured.articles.nodes[0] : null;
+	let sections = data.categories
+		.filter((section) => section.isSection)
+		.filter((section) => section.articles.nodes.length > 0);
 </script>
 
 <svelte:head>
