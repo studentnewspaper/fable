@@ -32,14 +32,22 @@ html {
 }
 
 .article :is(ul, ol) {
-	@apply ml-8 list-disc;
+	@apply ml-8 list-disc space-y-2;
+}
+
+.article ul {
+	@apply list-disc;
+}
+
+.article ol {
+	@apply list-decimal;
 }
 
 .article li::marker {
 	@apply text-red-700;
 }
 
-.article li {
+.article ul li {
 	@apply pl-1;
 }
 
@@ -57,4 +65,8 @@ html {
 
 .article figcaption {
 	@apply italic border-l pl-4 pt-3 pb-2;
+}
+
+.stu-headline {
+	@apply font-headline leading-tight text-5xl text-red-600;
 }
