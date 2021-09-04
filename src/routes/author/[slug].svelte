@@ -39,6 +39,8 @@
 </script>
 
 <script lang="ts">
+	import PageHeader from '$lib/PageHeader.svelte';
+
 	export let author: NonNullable<AuthorQuery['author']>;
 </script>
 
@@ -46,11 +48,9 @@
 	<title>{author.name} — The Student</title>
 </svelte:head>
 
-<div class="mt-8 fw">
-	<h1 class="font-headline leading-tight text-5xl text-red-600">
-		{author.name}
-	</h1>
+<PageHeader>{author.name}</PageHeader>
 
+<div class="fw">
 	{#if author.bio != null}
 		<div class="mt-1 font-serif space-y-4">
 			{@html author.bio}

@@ -74,7 +74,7 @@
 
 <article class="mt-6 xs:mt-8 fw grid gap-x-6">
 	<div>
-		<h1 class="font-headline leading-tight text-5xl text-red-600">
+		<h1 class="stu-headline">
 			{article.title}
 		</h1>
 	</div>
