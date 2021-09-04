@@ -5,16 +5,6 @@
 		"people": ["Ece Kucuk"]
 	},
 	{
-		"role": "Editor In Chief",
-		"email": "editors@studentnewspaper.org",
-		"people": ["Nicholas Bush"]
-	},
-	{
-		"role": "Deputy Editor In Chief",
-		"email": "editors@studentnewspaper.org",
-		"people": ["Georgina McNamara"]
-	},
-	{
 		"role": "Secretary",
 		"email": "secretary@studentnewspaper.org",
 		"people": ["Freya Buxton"]
@@ -25,18 +15,29 @@
 		"people": ["Karishma Balasubramanian"]
 	},
 	{
-		"role": "Inclusivity Officer",
-		"people": ["Tanvi Ajmera"]
+		"role": "Editor In Chief",
+		"email": "editors@studentnewspaper.org",
+		"people": ["Nicholas Bush"]
 	},
 	{
-		"role": "Social Secretary",
-		"email": "social@studentnewspaper.org",
-		"people": ["Karuna Rahman"]
+		"role": "Deputy Editor In Chief",
+		"email": "editors@studentnewspaper.org",
+		"people": ["Georgina McNamara"]
 	},
 	{
-		"role": "Outreach Officer",
-		"email": "outreach@studentnewspaper.org",
-		"people": ["Cisy Ye"]
+		"role": "Head of Advertising",
+		"email": "advertising@studentnewspaper.org",
+		"people": ["Emma Conn"]
+	},
+	{
+		"role": "Head of Marketing",
+		"email": "marketing.studentnewspaper@gmail.com",
+		"people": ["Ritu Andrews Machilath"]
+	},
+	{
+		"role": "Head of Distribution",
+		"email": "distribution.thestudent@gmail.com",
+		"people": ["Laura McLay"]
 	},
 	{
 		"role": "Head of Digital",
@@ -44,16 +45,18 @@
 		"people": ["Nick Bush"]
 	},
 	{
-		"role": "Social Media",
-		"people": ["Ritu Andrews Machilath"]
+		"role": "Inclusivity Officer",
+		"email": "inclusivity.studentnewspaper@gmail.com",
+		"people": ["Tanvi Ajmera"]
 	},
 	{
-		"role": "Advertising Officer",
-		"email": "advertising@studentnewspaper.org",
-		"people": ["Emma Conn"]
+		"role": "Community Outreach Officer",
+		"email": "outreach@studentnewspaper.org",
+		"people": ["Cisy Ye"]
 	},
 	{
-		"role": "Distribution Officer",
-		"people": ["Laura McLay"]
+		"role": "Social Secretary",
+		"email": "social@studentnewspaper.org",
+		"people": ["Karuna Rahman"]
 	}
 ]
