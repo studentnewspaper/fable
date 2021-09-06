@@ -1,7 +1,6 @@
 query Homepage {
 	featured: categories(include: ["featured"]) {
 		id
-		name
 		isSection
 		articles(take: 12) {
 			nodes {
@@ -16,7 +15,9 @@ query Homepage {
 		}
 	}
 
-	categories(exclude: ["featured"]) {
+	categories(
+		include: ["news", "opinion", "features", "review", "lifestyle", "voices", "sport", "science"]
+	) {
 		id
 		name
 		isSection

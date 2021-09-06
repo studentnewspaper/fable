@@ -9,7 +9,7 @@
 
 		const result = await client
 			.query<SectionQuery, SectionQueryVariables>(SectionDocument, {
-				id: page.params.slug,
+				slug: page.params.slug,
 			})
 			.toPromise();
 

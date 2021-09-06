@@ -8,8 +8,7 @@
 	const year = new Date().getFullYear();
 	const links = [
 		['Latest', '/'],
-		['Freshers', '/section/freshers'],
-		['Fringe', '/section/fringe'],
+		['Freshers', '/section/freshers-21'],
 		['About', '/about'],
 		['Get involved', '/get-involved'],
 	];

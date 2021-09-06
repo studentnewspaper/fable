@@ -1,5 +1,5 @@
-query Section($id: String!) {
-	category(id: $id) {
+query Section($slug: String!) {
+	category(slug: $slug) {
 		id
 		name
 		articles(take: 150) {
