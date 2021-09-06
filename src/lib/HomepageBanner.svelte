@@ -1,4 +1,4 @@
-<div class="pt-7 pb-5 bg-red-600 text-white shadow-sm">
+<div class="pt-7 pb-5 bg-red-600 text-white">
 	<div class="fw">
 		<slot />
 	</div>

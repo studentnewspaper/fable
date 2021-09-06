@@ -26,7 +26,6 @@
 
 <script lang="ts">
 	import HomepageBanner from '$lib/HomepageBanner.svelte';
-	// import Section from '$lib/Section.svelte';
 
 	export let data: HomepageQuery;
 	let featured = data.featured[0];
@@ -34,11 +33,43 @@
 	let sections = data.categories
 		.filter((section) => section.isSection)
 		.filter((section) => section.articles.nodes.length > 0);
+
+	let freshersTitle = 'Freshers 2021 Coverage';
 </script>
 
 <svelte:head>
 	<title>The Student</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+	<link
+		href={`https://fonts.googleapis.com/css2?family=Knewave&display=swap&text=${encodeURIComponent(
+			freshersTitle
+		)}`}
+		rel="stylesheet"
+	/>
 </svelte:head>
+
+<div class="mt-4 relative">
+	<HomepageBanner>
+		<div class="flex flex-row items-stretch pb-1">
+			<div class="py-2 flex flex-col justify-center flex-shrink-0 pr-8 mr-7 border-r border-white">
+				<div
+					class="text-5xl tracking-tight leading-none relative -top-1"
+					style="font-family: Knewave, cursive;"
+				>
+					{freshersTitle.split(' ').slice(0, 2).join(' ')}<br />{freshersTitle.split(' ')[2]}
+				</div>
+			</div>
+			<div class="py-2 flex flex-row items-center">
+				<p class="font-bold leading-snug text-lg">
+					Find out all you need to know about Edinburgh, your new home away from home! From clubs to
+					restaurants to societies, <span class="italic">The Student</span> has got you covered.
+				</p>
+			</div>
+		</div>
+	</HomepageBanner>
+	<a href="/section/freshers" class="absolute inset-0 opacity-0">View freshers pack</a>
+</div>
 
 {#if featured != null && topArticle != null}
 	<div class="fw mt-8">
@@ -99,16 +130,6 @@
 			</div>
 			<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-x-4 gap-y-6 fw">
 				<div class="col-span-2 flex flex-col">
-					<!-- <div class="bg-blue-100 flex-grow mb-3" /> -->
-					<!-- {#if section.articles.nodes[0].featuredImage != null}
-						<div class="flex-grow mb-3 relative overflow-hidden">
-							<img
-								src={section.articles.nodes[0].featuredImage.url}
-								alt=""
-								class="absolute inset-0 object-cover object-center w-full max-w-none"
-							/>
-						</div>
-					{/if} -->
 					<div class="font-headline text-xl font-bold">
 						<a href={`/article/${section.articles.nodes[0].slug}`} class="hover:underline"
 							>{section.articles.nodes[0].title}</a

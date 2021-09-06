@@ -11,6 +11,7 @@
 		['Freshers', '/section/freshers'],
 		['Fringe', '/section/fringe'],
 		['About', '/about'],
+		['Get involved', '/get-involved'],
 	];
 </script>
 
