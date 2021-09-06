@@ -51,17 +51,19 @@
 
 <div class="mt-4 relative">
 	<HomepageBanner>
-		<div class="flex flex-row items-stretch pb-1">
-			<div class="py-2 flex flex-col justify-center flex-shrink-0 pr-8 mr-7 border-r border-white">
+		<div class="flex flex-col md:flex-row items-stretch pb-1">
+			<div
+				class="py-2 flex flex-col justify-center flex-shrink-0 pr-8 mr-7 md:border-r border-white"
+			>
 				<div
 					class="text-5xl tracking-tight leading-none relative -top-1"
 					style="font-family: Knewave, cursive;"
 				>
-					{freshersTitle.split(' ').slice(0, 2).join(' ')}<br />{freshersTitle.split(' ')[2]}
+					Freshers 2021 <br class="hidden md:block" />Coverage
 				</div>
 			</div>
 			<div class="py-2 flex flex-row items-center">
-				<p class="font-bold leading-snug text-lg">
+				<p class="font-bold leading-snug lg:text-lg">
 					Find out all you need to know about Edinburgh, your new home away from home! From clubs to
 					restaurants to societies, <span class="italic">The Student</span> has got you covered.
 				</p>
