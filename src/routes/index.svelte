@@ -26,11 +26,13 @@
 
 <script lang="ts">
 	import HomepageBanner from '$lib/HomepageBanner.svelte';
+	import { isTruthy } from '$lib/utils';
 
 	export let data: HomepageQuery;
-	let featured = data.featured[0];
+	let featured = data.featured;
 	let topArticle = featured != null ? featured.articles.nodes[0] : null;
-	let sections = data.categories
+	let sections = data
+		.categories!.filter(isTruthy)
 		.filter((section) => section.isSection)
 		.filter((section) => section.articles.nodes.length > 0);
 
@@ -70,7 +72,7 @@
 			</div>
 		</div>
 	</HomepageBanner>
-	<a href="/section/freshers" class="absolute inset-0 opacity-0">View freshers pack</a>
+	<a href="/section/freshers-21" class="absolute inset-0 opacity-0">View freshers pack</a>
 </div>
 
 {#if featured != null && topArticle != null}
@@ -122,11 +124,11 @@
 {/if}
 
 <div class="space-y-8 mt-8">
-	{#each sections as section (section.id)}
+	{#each sections as section (section.slug)}
 		<div>
 			<div class="fw flex flex-row items-center space-x-4 mb-3">
 				<div class="font-headline font-semibold text-2xl text-red-600 flex-shrink-0">
-					<a href={`/section/${section.id}`} class="hover:underline">{section.name}</a>
+					<a href={`/section/${section.slug}`} class="hover:underline">{section.name}</a>
 				</div>
 				<div class="border-b border-red-600 flex-grow h-0 relative -top-0.5" />
 			</div>

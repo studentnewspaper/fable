@@ -1,6 +1,6 @@
-query Section($slug: String!) {
-	category(slug: $slug) {
-		id
+query Section($slug: ID!) {
+	categoriesById(id: $slug) {
+		slug
 		name
 		articles(take: 150) {
 			hasNextPage

@@ -1,6 +1,6 @@
 query Homepage {
-	featured: categories(include: ["featured"]) {
-		id
+	featured: categoriesById(id: "featured") {
+		slug
 		isSection
 		articles(take: 12) {
 			nodes {
@@ -15,10 +15,8 @@ query Homepage {
 		}
 	}
 
-	categories(
-		include: ["news", "opinion", "features", "review", "lifestyle", "voices", "sport", "science"]
-	) {
-		id
+	categories(filter: { isSection: { eq: true } }) {
+		slug
 		name
 		isSection
 		articles(take: 12) {

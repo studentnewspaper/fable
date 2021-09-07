@@ -17,13 +17,13 @@
 			return { status: 500, error: result.error };
 		}
 
-		if (result.data?.category == null) {
+		if (result.data?.categoriesById == null) {
 			return { status: 404 };
 		}
 
 		return {
 			props: {
-				section: result.data.category,
+				section: result.data.categoriesById,
 			},
 			maxage: 5 * 60,
 		};
@@ -33,7 +33,7 @@
 <script lang="ts">
 	import PageHeader from '$lib/PageHeader.svelte';
 
-	export let section: NonNullable<SectionQuery['category']>;
+	export let section: NonNullable<SectionQuery['categoriesById']>;
 </script>
 
 <svelte:head>

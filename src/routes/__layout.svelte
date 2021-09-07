@@ -43,6 +43,9 @@
 <footer class="mt-16 bg-gray-100 border-t">
 	<div class="py-6 fw">
 		<div>&copy; The Student Newspaper {year}</div>
-		<div>Site designed and developed by Nicholas Bush and Isabella Ronca</div>
+		<div>
+			Site designed and developed by Nicholas Bush, with Georgie McNamara, Hannah Robinson, and
+			Isabella Ronca.
+		</div>
 	</div>
 </footer>
