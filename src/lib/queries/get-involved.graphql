@@ -1,0 +1,9 @@
+query GetInvolved {
+	vacancies {
+		id
+		title
+		description
+		href
+		closesAt
+	}
+}

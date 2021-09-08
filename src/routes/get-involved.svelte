@@ -1,9 +1,40 @@
 <script lang="ts" context="module">
-	export let hydrate = false;
+	import type { Load } from '@sveltejs/kit';
+	import { createClient } from '$lib/client';
+	import { GetInvolvedDocument } from '$lib/generated/graphql';
+	import type { GetInvolvedQuery, GetInvolvedQueryVariables } from '$lib/generated/graphql';
+
+	export const hydrate = false;
+
+	export const load: Load = async ({ fetch, page }) => {
+		const client = createClient(fetch);
+
+		const result = await client
+			.query<GetInvolvedQuery, GetInvolvedQueryVariables>(GetInvolvedDocument, {})
+			.toPromise();
+
+		if (result.error != null) {
+			console.error(result.error);
+			return { status: 500, error: result.error };
+		}
+
+		const vacancies = result.data!.vacancies!.filter(isTruthy);
+
+		return {
+			props: { vacancies },
+			maxage: 5 * 60,
+		};
+	};
 </script>
 
 <script lang="ts">
 	import PageHeader from '$lib/PageHeader.svelte';
+	import { isTruthy } from '$lib/utils';
+	import { format } from 'date-fns';
+
+	type Vacancy = NonNullable<NonNullable<GetInvolvedQuery['vacancies']>[0]>;
+
+	export let vacancies: Vacancy[];
 </script>
 
 <svelte:head>
@@ -19,6 +50,37 @@
 		Hey there! We’re so glad that you want to get involved with The Student. We’re always looking
 		for new people to join us. There are a number of ways to do this:
 	</p>
+
+	<h1>Current vacancies</h1>
+	<div class="grid gap-y-4" style="grid-template-columns: auto 1fr;">
+		{#each vacancies as vacancy (vacancy.id)}
+			<div class="flex flex-row items-baseline w-full">
+				<div class="flex-shrink-0 font-sans leading-normal">
+					<div class="font-semibold">
+						{vacancy.title}
+					</div>
+
+					{#if vacancy.href != null}
+						<div class="leading-none">
+							<a href={vacancy.href} class="text-sm text-red-600 hover:underline">Contact</a>
+						</div>
+					{/if}
+				</div>
+				<div
+					class="flex-grow border-b border-dotted mx-2 border-gray-400 min-w-[15px] md:min-w-[40px]"
+				/>
+			</div>
+			<div>
+				{#if vacancy.description != null}
+					{@html vacancy.description}
+				{:else}
+					<p class="text-gray-600 italic">Find out more information by contacting us.</p>
+				{/if}
+			</div>
+		{/each}
+	</div>
+
+	<h1>Write for us</h1>
 	<ol>
 		<li>
 			Join our Facebook groups. We have one for each section of our paper, as well as an

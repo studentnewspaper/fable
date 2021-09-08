@@ -1,6 +1,7 @@
 <script lang="ts" context="module">
 	import '@fontsource/andada-pro/400.css';
 	import '@fontsource/inter/400.css';
+	import '@fontsource/inter/600.css';
 	import '../app.css';
 </script>
 
