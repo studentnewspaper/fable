@@ -1,6 +1,7 @@
 query Article($slug: String!) {
 	article(slug: $slug) {
 		id
+		slug
 		published
 		updated
 		title
