@@ -76,6 +76,7 @@
 	<meta property="og:locale" content="en_GB" />
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={article.title} />
+	<meta property="og:description" content={`${article.author.name} at The Student`} />
 	<meta property="og:url" content={`https://studentnewspaper.org/article/${article.slug}`} />
 	<meta property="og:site_name" content="The Student" />
 	<meta property="article:publisher" content="https://studentnewspaper.org" />
