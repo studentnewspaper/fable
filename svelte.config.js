@@ -2,6 +2,13 @@ import preprocess from 'svelte-preprocess';
 import path from 'path';
 import node from '@sveltejs/adapter-node';
 
+const sha = process.env.VITE_GIT_COMMIT_SHA ?? null;
+if (sha != null) {
+	console.log(`Running fable:${sha}`);
+} else {
+	console.log(`No release SHA available`);
+}
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
