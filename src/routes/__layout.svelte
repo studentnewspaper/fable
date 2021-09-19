@@ -3,6 +3,29 @@
 	import '@fontsource/inter/400.css';
 	import '@fontsource/inter/600.css';
 	import '../app.css';
+
+	import * as Sentry from '@sentry/browser';
+	import { Integrations } from '@sentry/tracing';
+	import { dev } from '$app/env';
+
+	const sha = import.meta.env.VITE_GIT_COMMIT_SHA ?? null;
+	if (sha != null) {
+		console.log(`Running fable:${sha}`);
+	} else {
+		console.log(`No release SHA available`);
+	}
+
+	// Sentry.init({
+	// 	dsn: 'https://6a1fc67964314028bded070bfbfb21af@o431302.ingest.sentry.io/5966792',
+	// 	integrations: [new Integrations.BrowserTracing()],
+	// 	enabled: !dev,
+	// 	release: sha,
+
+	// 	// Set tracesSampleRate to 1.0 to capture 100%
+	// 	// of transactions for performance monitoring.
+	// 	// We recommend adjusting this value in production
+	// 	tracesSampleRate: 1.0,
+	// });
 </script>
 
 <script lang="ts">
