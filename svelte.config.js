@@ -4,7 +4,13 @@ import node from '@sveltejs/adapter-node';
 
 const sha = process.env.VITE_GIT_COMMIT_SHA ?? null;
 if (sha != null) {
-	console.log(`Running fable:${sha}`);
+	if (typeof sha == 'string') {
+		console.log(`Running fable:${sha}`);
+		console.log(`SHA has a length of ${sha.length}`);
+	} else {
+		console.log(`SHA of unexpected type: ${typeof sha}`);
+		console.log(sha);
+	}
 } else {
 	console.log(`No release SHA available`);
 }
