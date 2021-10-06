@@ -15,8 +15,6 @@ if (sha != null) {
 	console.log(`No release SHA available`);
 }
 
-console.log(process.env);
-
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
