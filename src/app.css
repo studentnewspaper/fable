@@ -56,11 +56,11 @@ html {
 }
 
 .article h1 {
-	@apply text-2xl font-bold;
+	@apply text-2xl font-bold font-headline !mt-8;
 }
 
 .article h2 {
-	@apply text-lg font-bold;
+	@apply text-lg font-bold font-headline !mt-5;
 }
 
 .article figcaption {
