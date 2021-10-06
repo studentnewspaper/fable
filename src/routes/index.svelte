@@ -41,14 +41,6 @@
 
 <svelte:head>
 	<title>The Student</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-	<link
-		href={`https://fonts.googleapis.com/css2?family=Knewave&display=swap&text=${encodeURIComponent(
-			freshersTitle
-		)}`}
-		rel="stylesheet"
-	/>
 </svelte:head>
 
 {#if featured != null && topArticle != null}

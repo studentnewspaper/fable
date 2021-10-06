@@ -38,6 +38,10 @@
 	];
 </script>
 
+<svelte:head>
+	<link rel="dns-prefetch" href="https://gateway.fable.studentnewspaper.org" />
+</svelte:head>
+
 <header>
 	<!-- TODO: Handle scrolling without ugly scrollbar (perfect scrollbar, maybe?) -->
 	<nav class="border-b py-3 overflow-y-auto">
