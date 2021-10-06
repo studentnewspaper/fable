@@ -51,30 +51,6 @@
 	/>
 </svelte:head>
 
-<div class="mt-4 relative">
-	<HomepageBanner>
-		<div class="flex flex-col md:flex-row items-stretch pb-1">
-			<div
-				class="py-2 flex flex-col justify-center flex-shrink-0 pr-8 mr-7 md:border-r border-white"
-			>
-				<div
-					class="text-5xl tracking-tight leading-none relative -top-1"
-					style="font-family: Knewave, cursive;"
-				>
-					Freshers 2021 <br class="hidden md:block" />Coverage
-				</div>
-			</div>
-			<div class="py-2 flex flex-row items-center">
-				<p class="font-bold leading-snug lg:text-lg">
-					Find out all you need to know about Edinburgh, your new home away from home! From clubs to
-					restaurants to societies, <span class="italic">The Student</span> has got you covered.
-				</p>
-			</div>
-		</div>
-	</HomepageBanner>
-	<a href="/section/freshers-21" class="absolute inset-0 opacity-0">View freshers pack</a>
-</div>
-
 {#if featured != null && topArticle != null}
 	<div class="fw mt-8">
 		<div class="grid grid-cols-2 md:grid-cols-5 gap-x-4 gap-y-4">

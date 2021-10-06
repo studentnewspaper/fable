@@ -32,7 +32,6 @@
 	const year = new Date().getFullYear();
 	const links = [
 		['Latest', '/'],
-		['Freshers', '/section/freshers-21'],
 		['About', '/about'],
 		['Get involved', '/get-involved'],
 	];
@@ -51,10 +50,10 @@
 			{/each}
 		</div>
 	</nav>
-	<div class="font-headline font-bold text-4xl xs:text-6xl mt-5 xs:mt-6 leading-none fw">
-		<a href="/">The Student</a>
+	<div class="font-headline font-bold italic text-4xl xs:text-6xl mt-5 xs:mt-6 leading-none fw">
+		<a href="/">THE STUDENT</a>
 	</div>
-	<div class="font-serif xs:text-md leading-tight mt-1 mb-3 xs:mb-4 fw text-gray-800">
+	<div class="font-serif xs:text-md leading-tight mt-0 mb-3 xs:mb-4 fw text-gray-800">
 		Edinburgh's independent student newspaper
 	</div>
 	<div class="border-t mb-1" />
