@@ -34,6 +34,7 @@
 		['Latest', '/'],
 		['About', '/about'],
 		['Get involved', '/get-involved'],
+		['Get a copy', '/distribution'],
 	];
 </script>
 
