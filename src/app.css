@@ -68,5 +68,5 @@ html {
 }
 
 .stu-headline {
-	@apply font-headline leading-tight text-5xl text-red-600;
+	@apply font-headline leading-tight text-3xl md:text-5xl text-red-600;
 }
