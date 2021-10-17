@@ -5,7 +5,22 @@
 <script lang="ts">
 	import PageHeader from '../lib/PageHeader.svelte';
 
-	const locations: { name: string }[] = [{ name: 'Main Library' }];
+	const locations: { name: string }[] = [
+		{ name: 'Main Library' },
+		{ name: 'Teviot' },
+		{ name: 'Law Library' },
+		{ name: 'Pleasance Cafe' },
+		{ name: 'Black Medicine Coffee Co' },
+		{ name: 'Tesco Nicolson Street' },
+		{ name: 'Kilimanjaro Coffee' },
+		{ name: 'Lady and The Bear' },
+		{ name: 'Starbucks Nicolson Street' },
+		{ name: 'Considerit ' },
+		{ name: 'Hula Juice Bar Grassmarket' },
+		{ name: 'Brass Monkey (Drummond Street)' },
+		{ name: 'August_21' },
+		{ name: 'Zebra Coffee' },
+	];
 </script>
 
 <svelte:head>
