@@ -3,6 +3,21 @@
 	import '@fontsource/inter/400.css';
 	import '@fontsource/inter/600.css';
 	import '../app.css';
+
+	import { browser } from '$app/env';
+	import { trackPageView } from '$lib/tracking';
+
+	if (browser) {
+		let location: string = window.location.href;
+		trackPageView({ location, title: true });
+
+		window.addEventListener('sveltekit:navigation-end', (e: any) => {
+			const newWindow: Window = e.target;
+			const newLocation = newWindow.location.href;
+			trackPageView({ location: newLocation, title: true, previous: location });
+			location = newLocation;
+		});
+	}
 </script>
 
 <script lang="ts">

@@ -5,8 +5,14 @@
 		<link rel="icon" href="/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		%svelte.head%
+		<script>
+			var _paq = (window._paq = window._paq || []);
+			_paq.push(['setTrackerUrl', 'https://iris.fabric.studentnewspaper.org/matomo.php']);
+			_paq.push(['setSiteId', '1']);
+		</script>
 	</head>
 	<body>
 		<div id="svelte">%svelte.body%</div>
+		<script src="https://iris.fabric.studentnewspaper.org/matomo.js" async></script>
 	</body>
 </html>
